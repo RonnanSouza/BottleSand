@@ -44,4 +44,9 @@ public class Creator : MonoBehaviour
     {
         ChangeColor(Color.cyan);
     }
+
+    public void ChangeToRed()
+    {
+        ChangeColor(Color.red);
+    }
 }
