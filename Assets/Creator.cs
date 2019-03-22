@@ -21,10 +21,10 @@ public class Creator : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Color color = ActualColor;
-            float tone = Mathf.Max(0, Mathf.Min(Random.Range(-variance, variance), 1));
-            color.r += tone;
-            color.g += tone;
-            color.b += tone;
+            float hueVariance = Mathf.Max(0, Mathf.Min(Random.Range(-variance, variance), 1));
+            color.r += hueVariance;
+            color.g += hueVariance;
+            color.b += hueVariance;
 
             var mousePositionInWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             GameObject inst = Instantiate(Sand, new Vector3(mousePositionInWorld.x, mousePositionInWorld.y, 0), Quaternion.identity);
